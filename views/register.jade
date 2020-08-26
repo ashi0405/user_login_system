@@ -1,0 +1,30 @@
+extends layout
+
+block content
+  form.container.pb-3.pt-4(method='post', action='/register')
+    h2.page-header Register
+    p Please register using the form below
+    hr.solid(style='border-top: 1.5px solid #999;')
+    .form-group
+      label Name
+      input.form-control(name='name', type='text', placeholder='Enter Name')
+    .form-group
+      label Email
+      input.form-control(name='email', type='email', placeholder='Enter Email')
+    .form-group
+      label Username
+      input.form-control(name='username', type='text', placeholder='Enter Username')
+    .form-group
+      label Password
+      input.form-control(name='password', type='password', placeholder='Enter Password')
+    .form-group
+      label Confirm Password
+      input.form-control(name='confirmedpassword', type='password', placeholder='Confirm Password')
+    input.btn.btn-primary.mt-3.mb-3(type='submit')
+    br
+    a(href='login') Already have an account? Log in
+
+  
+
+
+    

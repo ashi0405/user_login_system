@@ -1,0 +1,28 @@
+{
+  "name": "user-login-system",
+  "version": "1.0.0",
+  "description": "user login system for register and login",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "bcrypt": "^5.0.0",
+    "body-parser": "^1.19.0",
+    "connect-flash": "^0.1.1",
+    "cookie-parser": "~1.4.4",
+    "dotenv": "^8.2.0",
+    "express": "~4.16.1",
+    "express-messages": "1.0.1",
+    "express-session": "^1.17.1",
+    "express-validator": "5.3.1",
+    "http-errors": "~1.6.3",
+    "jade": "~1.11.0",
+    "joi": "^14.3.1",
+    "mongodb": "3.5.9",
+    "mongoose": "5.9.25",
+    "morgan": "~1.9.1"
+  },
+  "author": "ashita bajaj",
+  "license": "ISC"
+}

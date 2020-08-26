@@ -1,0 +1,18 @@
+extends layout
+
+block content
+  form.container.pt-5.pb-3(method='post', action='/login')
+    h2.page-header Login
+    p Please login below
+    hr.solid(style='border-top: 1.5px solid #999;')
+    .form-group
+      label Email address
+      input.form-control(name='email',type='email', aria-describedby='emailHelp',placeholder='Enter Email')
+      small.form-text.text-muted We'll never share your email with anyone else.
+    .form-group
+      label Password
+      input.form-control(name='password',type='password',placeholder='Enter Password')
+      //- .form-group.form-check
+        //- input#exampleCheck1.form-check-input(type='checkbox')
+        //- label.form-check-label(for='exampleCheck1') Check me out
+    input.btn.btn-primary.mb-3(type='submit') 
