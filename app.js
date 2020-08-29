@@ -16,7 +16,7 @@ const password=process.env.DB_PASS
 
 mongoose
   // .connect("mongodb://localhost/users")
-
+  
   .connect(`mongodb+srv://${user}:${password}@cluster0.iyviz.mongodb.net/users?retryWrites=true&w=majority`,{useUnifiedTopology:true,useNewUrlParser:true})
   .then(console.log("Connected to Mongodb..."))
   .catch((e) => {
@@ -56,13 +56,9 @@ app.use(function (req, res, next) {
 app.get("/", function (req, res, next) {
   res.location('/redirect')
   res.redirect('/register')
-  // res.render("register", { title: "Register" });
-
- 
 });
 
 app.get("/register", (req, res) => {
- 
   res.render("register", { title: "Register" });
 });
 
@@ -137,16 +133,6 @@ app.post("/login", async (req, res) => {
     res.redirect("/login");
   }
 });
-
-// app.get("/welcome", (req, res) => {
-//   console.log("welcome site is here");
-//   res.render("website");
-// });
-
-// app.post("/logout", (req, res) => {
-//   res.location("/login");
-//   res.redirect("/login");
-// });
 
 const port = process.env.PORT || 5000;
 app.listen(port, function () {
