@@ -7,6 +7,7 @@ const userSchema = new mongoose.Schema({
     password: { type: String },
     password1: { type: String },
     email: { type: String },
+
 });
 
 const Users = mongoose.model("people", userSchema);
@@ -39,6 +40,8 @@ function validateCurrentuser(users) {
     };
     return Joi.validate(users, schemas);
 }
+
+
 
 module.exports.Users = Users;
 module.exports.validateUser = validateUser;
