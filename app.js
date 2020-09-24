@@ -92,7 +92,8 @@ app.post("/register", async (req, res) => {
       to: req.body.email,
       subject: 'Account Verification',
       // html: "<a href='https://user-login-system.herokuapp.com/login'>Verification Link</a>"
-      html: 'Hello,\n\n' + 'Please verify your account by clicking the link: \nhttp:\/\/' + req.headers.host + '\/confirmation\/'
+      // html: 'Hello,\n\n' + 'Please verify your account by clicking the link: \nhttp:\/\/' + req.headers.host + '\/confirmation\/'
+      html:"<a href='https://user-login-system.herokuapp.com/confirmation'>LINK</a>"
     };
     transporter.sendMail(mailOptions, function (err) {
       if (err) { console.log(err) }
