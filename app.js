@@ -86,14 +86,17 @@ app.post("/register", async (req, res) => {
         pass: mailPass
       }
     });
-
+    host=req.get('host');
+    link="http://"+req.get('host')+"/verify?id="+rand;
     var mailOptions = {
       from: 'funnymission08@gmail.com',
       to: req.body.email,
       subject: 'Account Verification',
       // html: "<a href='https://user-login-system.herokuapp.com/login'>Verification Link</a>"
       // html: 'Hello,\n\n' + 'Please verify your account by clicking the link: \nhttp:\/\/' + req.headers.host + '\/confirmation\/'
-      html:"<a href='https://user-login-system.herokuapp.com/confirmation'>LINK</a>"
+
+      // html:"<a href='+https://user-login-system.herokuapp.com/confirmation+'>LINK</a>"
+      html:"<a href="+link+">Click here</a>"
     };
     transporter.sendMail(mailOptions, function (err) {
       if (err) { console.log(err) }
