@@ -91,7 +91,7 @@ app.post("/register", async (req, res) => {
       from: 'funnymission08@gmail.com',
       to: req.body.email,
       subject: 'Account Verification',
-      html: "<a href='http://localhost:5000/confirmation'>Verification Link</a>"
+      html: "<a href='/confirmation'>Verification Link</a>"
     };
     transporter.sendMail(mailOptions, function (err) {
       if (err) { console.log(err) }
