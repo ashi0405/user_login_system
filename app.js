@@ -94,8 +94,8 @@ app.post("/register", async (req, res) => {
     var mailOptions = {
       from: 'funnymission08@gmail.com',
       to: req.body.email,
-      subject: 'Account Verification',
-      html:'https://user-login-system.herokuapp.com/confirmation'
+      subject: 'Account Verification mail is here',
+      html:"<a href='https://user-login-system.herokuapp.com/confirmation'>LINKING</a>"
     
       // html: "<a href='https://user-login-system.herokuapp.com/login'>Verification Link</a>"
       // html: 'Hello,\n\n' + 'Please verify your account by clicking the link: \nhttp:\/\/' + req.headers.host + '\/confirmation\/'
