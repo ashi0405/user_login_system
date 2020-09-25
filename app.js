@@ -1,12 +1,11 @@
 const express = require("express");
 const app = express();
-const bodyParser = require("body-parser");
+// const bodyParser = require("body-parser");
 const path = require("path");
 const bcrypt = require("bcrypt");
 const cookieParser = require('cookie-parser')
 var nodemailer = require('nodemailer');
-var http=require('http');
-var url=require('url');
+
 
 const session = require("express-session");
 
@@ -88,9 +87,8 @@ app.post("/register", async (req, res) => {
         pass: mailPass
       }
     });
-    var hostname=req.headers.host;
-    var pathname=url.parse(req.url).pathname;
-    console.log('http://'+hostname+pathname);
+
+ 
     var mailOptions = {
       from: 'funnymission08@gmail.com',
       to: req.body.email,
