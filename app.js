@@ -80,17 +80,26 @@ app.post("/register", async (req, res) => {
       return;
     }
 
-    var transporter = nodemailer.createTransport({
-      service: 'yahoo',
+    // var transporter = nodemailer.createTransport({
+    //   service: 'yahoo',
+    //   auth: {
+    //     user: mailUser,
+    //     pass: mailPass
+    //   }
+    // });
+
+    let transporter = nodemailer.createTransport({
+      host: 'email-smtp.us-east-2.amazonaws.com',
+      port: 465,
       auth: {
-        user: mailUser,
-        pass: mailPass
+        user: process.env.SMTP_USERNAME,
+        pass: process.env.SMTP_PASSWORD
       }
     });
 
  
     var mailOptions = {
-      from: 'bajaj.aashita@yahoo.in',
+      from: 'admin@thedarkhorse.io',
       to: req.body.email,
       subject: 'Account Verification',
       html:"<a href='https://user-login-system.herokuapp.com/confirmation'>Verification Link</a>"
