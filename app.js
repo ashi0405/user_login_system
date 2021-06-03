@@ -90,7 +90,7 @@ app.post("/register", async (req, res) => {
 
  
     var mailOptions = {
-      from: 'funnymission08@gmail.com',
+      from: 'bajaj.aashita@yahoo.in',
       to: req.body.email,
       subject: 'Account Verification',
       html:"<a href='https://user-login-system.herokuapp.com/confirmation'>Verification Link</a>"
