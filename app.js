@@ -81,7 +81,7 @@ app.post("/register", async (req, res) => {
     }
 
     var transporter = nodemailer.createTransport({
-      service: 'gmail',
+      service: 'yahoo',
       auth: {
         user: mailUser,
         pass: mailPass
