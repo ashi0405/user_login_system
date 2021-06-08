@@ -24,7 +24,7 @@ mongoose
   .connect(`mongodb+srv://${user}:${password}@cluster0.iyviz.mongodb.net/users?retryWrites=true&w=majority`, { useUnifiedTopology: true, useNewUrlParser: true })
   .then(console.log("Connected to Mongodb..."))
   .catch((e) => {
-    console.log("Some Error occured..", e);
+    // console.log("Some Error occured..", e);
   });
 
 
